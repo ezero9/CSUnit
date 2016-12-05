@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">x86</Platform>
+    <ProjectGuid>{FC8AD8F0-E186-4DE2-92E0-00C0CBB1D3A3}</ProjectGuid>
+    <OutputType>Exe</OutputType>
+    <RootNamespace>CSUnit</RootNamespace>
+    <AssemblyName>CSUnit</AssemblyName>
+    <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|x86' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug</OutputPath>
+    <DefineConstants>DEBUG;</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <ExternalConsole>true</ExternalConsole>
+    <PlatformTarget>x86</PlatformTarget>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|x86' ">
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release</OutputPath>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <ExternalConsole>true</ExternalConsole>
+    <PlatformTarget>x86</PlatformTarget>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="System" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Program.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="CSUnit.Framework\Attribute\After.cs" />
+    <Compile Include="CSUnit.Framework\Attribute\Before.cs" />
+    <Compile Include="CSUnit.Framework\Attribute\SetUp.cs" />
+    <Compile Include="CSUnit.Framework\Attribute\TearDown.cs" />
+    <Compile Include="CSUnit.Framework\Attribute\Test.cs" />
+    <Compile Include="CSUnit.Framework\Exception\AssertionFailedException.cs" />
+    <Compile Include="CSUnit.Framework\Unit\ResultCollector.cs" />
+    <Compile Include="CSUnit.Framework\Unit\Unit.cs" />
+    <Compile Include="CSUnit.Framework\Unit\UnitCase.cs" />
+    <Compile Include="CSUnit.Framework\Unit\UnitSuite.cs" />
+    <Compile Include="CSUnit.UI.Console\ConsoleResultCollector.cs" />
+    <Compile Include="CSUnit.UI.Console\ConsoleRunner.cs" />
+    <Compile Include="CSUnit.Sample\CalculatorTest.cs" />
+    <Compile Include="CSUnit.Sample\Calculator.cs" />
+    <Compile Include="CSUnit.Framework\Util\StopWatch.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="CSUnit.UI.Console\" />
+    <Folder Include="CSUnit.Framework\" />
+    <Folder Include="CSUnit.Framework\Attribute\" />
+    <Folder Include="CSUnit.Framework\Exception\" />
+    <Folder Include="CSUnit.Framework\Unit\" />
+    <Folder Include="CSUnit.UI.File\" />
+    <Folder Include="CSUnit.Sample\" />
+    <Folder Include="CSUnit.Framework\Util\" />
+  </ItemGroup>
+  <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
+</Project>
