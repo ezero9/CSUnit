@@ -1,7 +1,7 @@
 ﻿using System;
 namespace CSUnit
 {
-	public class CalculatorTest : UnitCase
+	public class CalculatorConsoleTest : UnitCase
 	{
 		[SetUp]
 		public void SetUp()
